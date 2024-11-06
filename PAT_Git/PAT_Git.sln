@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAT.Editor.Test", "PAT.Editor.Test.csproj", "{7fc1a420-bf4d-13b8-9f86-dffb9220561d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PATRuntime", "PATRuntime.csproj", "{f687d458-0644-d39d-6dd1-0974c18c48e2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAT.Tests", "PAT.Tests.csproj", "{e4fca85b-e2ad-6c78-1e41-9255f92187d0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PATEditor", "PATEditor.csproj", "{e43bdab6-0b68-b824-aa9c-2ca8edf0ea09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{ffc156c8-5ebf-a61a-fccd-d6d753047639}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7fc1a420-bf4d-13b8-9f86-dffb9220561d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7fc1a420-bf4d-13b8-9f86-dffb9220561d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f687d458-0644-d39d-6dd1-0974c18c48e2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f687d458-0644-d39d-6dd1-0974c18c48e2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e4fca85b-e2ad-6c78-1e41-9255f92187d0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e4fca85b-e2ad-6c78-1e41-9255f92187d0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e43bdab6-0b68-b824-aa9c-2ca8edf0ea09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e43bdab6-0b68-b824-aa9c-2ca8edf0ea09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ffc156c8-5ebf-a61a-fccd-d6d753047639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ffc156c8-5ebf-a61a-fccd-d6d753047639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

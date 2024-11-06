@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/PenguinActionToolkit/Core/Scripts/Editor/PAT_Manager_EditorStyle.uss?fileID=7433441132597879392&amp;guid=213ab13d5183db34d8270cdab4aa1b39&amp;type=3#PAT_Manager_EditorStyle" />
+    <PAT.PAT_Manager_SplitWindow fixed-pane-initial-dimension="300" name="PAT_Manager_SplitWindow">
+        <ui:VisualElement name="left_panel" style="flex-grow: 1; width: -173px;">
+            <ui:Label tabindex="-1" text="Inspector" parse-escape-sequences="true" display-tooltip-when-elided="true" name="InspectorLabel" style="background-color: rgb(32, 32, 32); font-size: 15px; -unity-font: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;);" />
+            <PAT.PAT_Manager_InspectorWindow focusable="true" style="flex-grow: 1; width: auto;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="right_panel" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="NodeGraph" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NodeGraphLabel" style="background-color: rgb(32, 32, 32); font-size: 15px; -unity-font: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;);" />
+            <PAT.PAT_Manager_NodeWindow focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </PAT.PAT_Manager_SplitWindow>
+</ui:UXML>

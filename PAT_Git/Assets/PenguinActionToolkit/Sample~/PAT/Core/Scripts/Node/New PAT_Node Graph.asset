@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-779895078707702094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a2f6ebc401088458986b32bc340ed9, type: 3}
+  m_Name: PAT_CharacterNode
+  m_EditorClassIdentifier: 
+  guid: 9ff30b4ebb8c70f4ba9d12922dc15092
+  objid: 0
+  isInitialized: 0
+  parentIsChanged: 0
+  position: {x: 0, y: 0}
+  title: 
+  children: []
+  attachedScripts:
+  - {fileID: 11500000, guid: 22f28b2da63138441805917ce1b1137e, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5e0e23cb6b7af4b9aa605a61f8f9ef, type: 3}
+  m_Name: New PAT_Node Graph
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -779895078707702094}
+  isInitialzed: 0
+  characterObj: 0
+  nodes:
+  - {fileID: -779895078707702094}
+  nodeObjIds: 00000000

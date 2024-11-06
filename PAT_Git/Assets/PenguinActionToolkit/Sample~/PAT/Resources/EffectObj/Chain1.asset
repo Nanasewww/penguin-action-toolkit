@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3837188262368370089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308bbb25f29741d8a175519455c662ec, type: 3}
+  m_Name: EffectLifeControl
+  m_EditorClassIdentifier: 
+  removeAfterTime: 1
+  removeOnStateChange: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31122829b55e3ef4f82de2354f3bcc67, type: 3}
+  m_Name: Chain1
+  m_EditorClassIdentifier: 
+  mainTags: 65000000
+  resourceTag: -1
+  order: 0
+  effectType: 0
+  effectTarget: 0
+  value: 0
+  level: 0
+  _appliedTime: 0
+  source: {fileID: 0}
+  components:
+  - {fileID: -3837188262368370089}

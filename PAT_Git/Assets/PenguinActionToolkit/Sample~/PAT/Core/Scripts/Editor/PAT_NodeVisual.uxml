@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/PenguinActionToolkit/Core/Scripts/Editor/PAT_NodeStyle.uss?fileID=7433441132597879392&amp;guid=21725d39195250b4fa5e2a011996dcda&amp;type=3#PAT_NodeStyle" />
+    <ui:VisualElement name="node-border" picking-mode="Ignore" style="width: auto;">
+        <ui:VisualElement name="contents" picking-mode="Ignore">
+            <ui:VisualElement name="top" picking-mode="Ignore">
+                <ui:VisualElement name="input" />
+                <ui:VisualElement name="divider" />
+                <ui:VisualElement name="title">
+                    <ui:Label name="title-label" text="PAT_ModifierNode" class="unity-text-element unity-label" />
+                    <ui:VisualElement name="title-button-container">
+                        <ui:VisualElement name="collapse-button">
+                            <ui:VisualElement name="icon" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="This is a description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="scripts" />
+                <ui:VisualElement name="divider" class="vertical" />
+                <ui:VisualElement name="output" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="selection-border" picking-mode="Ignore" style="top: 1px; right: 0; left: 1px; bottom: 0;" />
+</ui:UXML>

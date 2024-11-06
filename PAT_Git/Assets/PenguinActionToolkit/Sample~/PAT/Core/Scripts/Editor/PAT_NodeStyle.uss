@@ -1,0 +1,218 @@
+#node-border {
+    background-color: rgb(68, 68, 68);
+    border-left-color: rgba(255, 0, 0, 0);
+    border-right-color: rgba(255, 0, 0, 0);
+    border-top-color: rgba(255, 0, 0, 0);
+    border-bottom-color: rgba(255, 0, 0, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    min-width: 200px;
+}
+
+#input {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#output {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#selection-border {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: 1;
+}
+
+:hover > #selection-border {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+:selected > #selection-border {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    flex-wrap: wrap;
+}
+
+:hover:selected > #selection-border {
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.node {
+    min-width: 100px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+    width: auto;
+}
+
+#title {
+    -unity-font-style: bold;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: upper-left;
+    -unity-font: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+}
+
+#description {
+    font-size: 11px;
+    -unity-font-style: italic;
+    color: rgb(255, 255, 255);
+    -unity-font: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+}
+
+.moveset #output {
+    background-color: rgb(42, 183, 202);
+}
+
+.moveset #input {
+    background-color: rgb(254, 215, 102);
+}
+
+.action #output {
+    background-color: rgb(157, 190, 83);
+}
+
+.action #input {
+    background-color: rgb(42, 183, 202);
+}
+
+.modifier #output {
+    background-color: rgb(230, 230, 234);
+    min-height: 24px;
+}
+
+.modifier #input {
+    background-color: rgb(157, 190, 83);
+}
+
+.character #output {
+    background-color: rgb(254, 215, 102);
+}
+
+.character #input {
+    background-color: rgb(254, 74, 73);
+    min-height: 24px;
+}
+
+.character #title {
+    -unity-font-style: bold;
+    font-size: 16px;
+    color: rgb(254, 74, 73);
+    -unity-text-align: upper-left;
+    -unity-font: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+}
+
+.moveset #title {
+    -unity-font-style: bold;
+    font-size: 16px;
+    color: rgb(254, 215, 102);
+    -unity-text-align: upper-left;
+    -unity-font: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+}
+
+.action #title {
+    -unity-font-style: bold;
+    font-size: 16px;
+    color: rgb(42, 183, 202);
+    -unity-text-align: upper-left;
+    -unity-font: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+}
+
+.modifier #title {
+    -unity-font-style: bold;
+    font-size: 16px;
+    color: rgb(157, 190, 83);
+    -unity-text-align: upper-left;
+    -unity-font: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+}
+
+.character #node-border {
+    background-color: rgb(68, 68, 68);
+    border-left-color: rgba(255, 0, 0, 0);
+    border-right-color: rgba(255, 0, 0, 0);
+    border-top-color: rgba(255, 0, 0, 0);
+    border-bottom-color: rgba(255, 0, 0, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    min-width: 200px;
+}
+
+.modifier #node-border {
+    background-color: rgb(68, 68, 68);
+    border-left-color: rgba(255, 0, 0, 0);
+    border-right-color: rgba(255, 0, 0, 0);
+    border-top-color: rgba(255, 0, 0, 0);
+    border-bottom-color: rgba(255, 0, 0, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-width: 200px;
+}
+
+.connectorBox #connector {
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    scale: 1 1;
+    width: 10px;
+    height: 10px;
+}

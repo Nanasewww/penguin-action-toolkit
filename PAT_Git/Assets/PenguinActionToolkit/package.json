@@ -1,0 +1,22 @@
+{
+    "name": "com.patpat.penguin-action-toolkit",
+    "version": "0.3.0",
+    "displayName": "Penguin Action Toolkit",
+    "description": "PAT package release test.",
+    "unity": "2022.3",
+    "dependencies": {
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.cinemachine": "2.10.1",
+        "com.unity.animation.rigging": "1.2.1",
+        "com.unity.ai.navigation": "1.1.5"
+    },
+    "author": "Team Patpat",
+    "documentationUrl": "https://patpat.gitbook.io/penguin-action-toolkit",
+    "samples": [
+        {
+            "displayName": "General Resrouces (MUST IMPORT)",
+            "description": "This includes all the core scripts and art resources for Penguin Action Toolkit. Please make sure you've imported this sample before using this package.",
+            "path": "Samples~/PAT"
+        }
+    ]
+}
