@@ -24,7 +24,7 @@ namespace PAT
             
             Vector3 finalMovement = Vector3.Dot(currentMovement + extraMovement, currentAxis.forward) * currentAxis.forward;
             finalMovement += Vector3.Dot(currentMovement + extraMovement, currentAxis.up) * currentAxis.up;
-            controller.Move(finalMovement * Time.fixedDeltaTime);
+            controller.Move(finalMovement * locomotion.FixedDeltaTime());
         }
 
         //check if this is working

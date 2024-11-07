@@ -59,7 +59,8 @@ namespace PAT
 
             //todo: this is almost good, but there might be inaccuracy due to fade in
             //possible fix is sync with normalized time after fade in
-            _normalizedTimeInState += Time.deltaTime/animator.GetCurrentAnimatorStateInfo(_info.layer).length;
+            _normalizedTimeInState += controller.deltaTime/(animator.GetCurrentAnimatorStateInfo(_info.layer).length * controller.timeScale);
+            //Length updated with action speed but not character timescale, so we need to times it here
 
             if (_exitOnMontageEnd && timeInState > _info.fadeTime 
                                   && animator.GetCurrentAnimatorStateInfo(_info.layer).IsName(_info.stateName)

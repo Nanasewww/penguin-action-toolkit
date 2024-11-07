@@ -484,7 +484,7 @@
                     "id": "13a26b24-1149-4a9c-adf1-6c93fdc7baed",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=2.4,y=0.8),StickDeadzone",
+                    "processors": "",
                     "groups": "",
                     "action": "Look",
                     "isComposite": false,

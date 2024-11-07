@@ -25,7 +25,7 @@ namespace PAT
 
         public void ApplyMovement(CharacterLocomotionBase locomotion)
         {
-            controller.Move((locomotion.currentMovement + locomotion.extraMovement) * Time.fixedDeltaTime);
+            controller.Move((locomotion.currentMovement + locomotion.extraMovement) * locomotion.FixedDeltaTime());
             
             //Snap to ground section
 
@@ -47,7 +47,7 @@ namespace PAT
         {
             controller.enabled = false;
             locomotion.characterTransform.rotation = Quaternion.RotateTowards(controller.transform.rotation, Quaternion.LookRotation(locomotion.currentRotateDirection), 
-                locomotion.currentAttribute.rotationSpeed * Time.fixedDeltaTime);
+                locomotion.currentAttribute.rotationSpeed * locomotion.FixedDeltaTime());
             controller.enabled = true;
         }
 

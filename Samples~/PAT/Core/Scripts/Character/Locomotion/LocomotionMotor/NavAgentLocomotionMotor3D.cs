@@ -17,13 +17,13 @@ namespace PAT
         public void ApplyMovement(CharacterLocomotionBase locomotion)
         {
             //Apply The Movement
-            agent.Move((locomotion.currentMovement + locomotion.extraMovement) * Time.fixedDeltaTime);
+            agent.Move((locomotion.currentMovement + locomotion.extraMovement) * locomotion.FixedDeltaTime());
         }
 
         public void ApplyRotation(CharacterLocomotionBase locomotion)
         {
             locomotion.characterTransform.rotation = Quaternion.RotateTowards(locomotion.characterTransform.rotation, Quaternion.LookRotation(locomotion.currentRotateDirection), 
-                locomotion.currentAttribute.rotationSpeed * Time.fixedDeltaTime);
+                locomotion.currentAttribute.rotationSpeed * locomotion.FixedDeltaTime());
         }
 
         public bool CheckIfGrounded(CharacterLocomotionBase locomotion)

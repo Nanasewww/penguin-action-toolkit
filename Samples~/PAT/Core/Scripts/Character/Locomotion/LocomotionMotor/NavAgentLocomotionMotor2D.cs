@@ -27,14 +27,14 @@ namespace PAT
             //Apply The Movement
             Vector3 finalMovement = Vector3.Dot(movement, currentAxis.forward) * currentAxis.forward;
             finalMovement += Vector3.Dot(movement, currentAxis.up) * currentAxis.up;
-            agent.Move(finalMovement * Time.fixedDeltaTime);
+            agent.Move(finalMovement * locomotion.FixedDeltaTime());
         }
 
         //todo: this is 2d, shall this really be like that?
         public void ApplyRotation(CharacterLocomotionBase locomotion)
         {
             locomotion.characterTransform.rotation = Quaternion.RotateTowards(locomotion.characterTransform.rotation, Quaternion.LookRotation(locomotion.currentRotateDirection), 
-                locomotion.currentAttribute.rotationSpeed * Time.fixedDeltaTime);
+                locomotion.currentAttribute.rotationSpeed * locomotion.FixedDeltaTime());
         }
 
         public bool CheckIfGrounded(CharacterLocomotionBase locomotion)

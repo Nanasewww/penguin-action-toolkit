@@ -149,7 +149,7 @@ namespace PAT
         {
             if (LocomotionAnimController == null)
             {
-                // TODO: there might not be aniamtions
+                // TODO: there might not be animations
                 LocomotionAnimController = gameObject.AddComponent<LocomotionAnimController3D>();
             }
             LocomotionAnimController.Initialize(this);
@@ -193,6 +193,8 @@ namespace PAT
             _currentMoveDirection = value;
             _moveSetted = true;
         }
+
+        public virtual float FixedDeltaTime() { return character.fixedDeltaTime; }
         
         /// <summary>
         /// Call this every update to control rotation direction
@@ -217,7 +219,7 @@ namespace PAT
                 
             //Acc if did not reach maximum speed
             Vector3 planeMove = _currentMovement; planeMove.y = 0;
-            Vector3 newMovement = planeMove + new Vector3(_currentMoveDirection.x, 0, _currentMoveDirection.z).normalized * acc * Time.fixedDeltaTime;
+            Vector3 newMovement = planeMove + new Vector3(_currentMoveDirection.x, 0, _currentMoveDirection.z).normalized * acc * FixedDeltaTime();
             
             //Case not max yet && slowing down
             if (newMovement.magnitude <= maxSpeed || newMovement.magnitude < planeMove.magnitude)
@@ -243,7 +245,7 @@ namespace PAT
             Vector3 planeMove = _currentMovement; planeMove.y = 0;
             
             Vector3 oldNormalize = planeMove.normalized;
-            _currentMovement -= oldNormalize * damp * Time.fixedDeltaTime;
+            _currentMovement -= oldNormalize * damp * FixedDeltaTime();
             
             //avoid over damp
             planeMove = _currentMovement;planeMove.y = 0;
@@ -258,7 +260,7 @@ namespace PAT
         {
             if (!_onGround && ! _currentAttribute.ignoreGravity)
             {
-                _currentMovement += Gravity * Time.fixedDeltaTime;
+                _currentMovement += Gravity * FixedDeltaTime();
             }
             else
             {
@@ -266,7 +268,7 @@ namespace PAT
                 {
                     float damp = _currentExtraData.groundDamp;
                     float oldSign = Mathf.Sign(_currentMovement.y);
-                    _currentMovement -= damp * Time.fixedDeltaTime * new Vector3(0, _currentMovement.normalized.y, 0) ;
+                    _currentMovement -= damp * FixedDeltaTime() * new Vector3(0, _currentMovement.normalized.y, 0) ;
             
                     //avoid over damp
                     if (Mathf.Sign(_currentMovement.y) != oldSign)
@@ -288,7 +290,7 @@ namespace PAT
             {
                 _extraMovement += _forces[i].dir.normalized * _forces[i].magnitude;
 
-                _forces[i].magnitude -= _forces[i].decaySpeed * Time.fixedDeltaTime;
+                _forces[i].magnitude -= _forces[i].decaySpeed * FixedDeltaTime();
                 if(_forces[i].magnitude <= 0) _forces.RemoveAt(i);
             } 
         }

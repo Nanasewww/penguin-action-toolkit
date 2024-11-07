@@ -59,6 +59,7 @@ namespace PAT
             if (pov == null) return;
             pov.m_HorizontalRecentering.m_enabled = recenter;
             pov.m_VerticalRecentering.m_enabled = recenter;
+            
         }
 
         public float GetAxisValue(int axis)

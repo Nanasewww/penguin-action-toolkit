@@ -36,7 +36,7 @@ namespace PAT
         public void ApplyRotation(CharacterLocomotionBase locomotion)
         {
             locomotion.characterTransform.rotation = Quaternion.RotateTowards(locomotion.characterTransform.rotation, Quaternion.LookRotation(locomotion.currentRotateDirection), 
-                locomotion.currentAttribute.rotationSpeed * Time.fixedDeltaTime);
+                locomotion.currentAttribute.rotationSpeed * locomotion.FixedDeltaTime());
         }
         
         public bool CheckIfGrounded(CharacterLocomotionBase locomotion)
@@ -61,7 +61,7 @@ namespace PAT
 
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
-            currentVelocity = finalMovement;
+            currentVelocity = finalMovement*character.timeScale;
         }
 
         public void BeforeCharacterUpdate(float deltaTime)

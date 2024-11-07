@@ -85,7 +85,7 @@ namespace PAT
         public virtual void EarlyOnUpdate(Character controller)
         {
             //todo: shall we make this dynamic one day?
-            timeInState += Time.deltaTime;
+            timeInState += controller.deltaTime;
             //Only execute the following for time in state mode
             if (mode != ModifierMode.ByTimeInState) return;
 

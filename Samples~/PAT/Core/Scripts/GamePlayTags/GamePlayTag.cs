@@ -60,5 +60,6 @@ public enum GamePlayTag{
     ATK = 1013,
     CATK = 1014,
     Impact = 1015,
-    Critical = 1016
+    Critical = 1016,
+    TimeScale = 1017,
 }

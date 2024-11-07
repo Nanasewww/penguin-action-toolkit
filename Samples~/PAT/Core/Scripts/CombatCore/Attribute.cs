@@ -35,6 +35,7 @@ namespace PAT
         public float currentAmount { get { return ProcessCurrentData(_baseAmount, amountEffects); } }
         public GamePlayTag resourceTag { get { return _resourceTag; } set{ _resourceTag = value;} }
         public float maxAmount { get { return _maxAmount; } set{ _maxAmount = value;}}
+        public float minAmount { get { return _minAmount; } set{ _minAmount = value;}}
 
         protected List<AttributeLaw> globalLaw;
         private void Reset()

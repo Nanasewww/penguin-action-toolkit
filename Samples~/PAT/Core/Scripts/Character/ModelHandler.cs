@@ -41,6 +41,7 @@ namespace PAT
         private void FixedUpdate()
         {
             _animator.SetFloat(_montageSpeedParameter, _montageSpeedAttribute.currentAmount);
+            _animator.speed = _owner.timeScale;
         }
 
         public void SetOwner(Character newOwner){_owner = newOwner;}
@@ -53,7 +54,7 @@ namespace PAT
         {
             CharacterLocomotionBase locomotion = _owner.Locomotion;
             
-            locomotion.AddExtraMove(locomotion.currentAttribute.rootMotionMutiplier * _animator.deltaPosition / Time.fixedDeltaTime);
+            locomotion.AddExtraMove(locomotion.currentAttribute.rootMotionMutiplier * _animator.deltaPosition / _owner.fixedDeltaTime);
             locomotion.InstantRotate(_animator.deltaRotation.eulerAngles.y);
         }
         

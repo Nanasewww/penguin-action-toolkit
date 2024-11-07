@@ -20,7 +20,7 @@ namespace PAT
         private bool CheckUngrounded()
         {
             if (characterController.Locomotion.onGround) { ungroundedTime = 0; }
-            else { ungroundedTime += Time.deltaTime; }
+            else { ungroundedTime += characterController.Locomotion.FixedDeltaTime(); }
 
             return ungroundedTime > coyoteTime;
         }

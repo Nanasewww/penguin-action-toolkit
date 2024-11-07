@@ -14,8 +14,8 @@
     "documentationUrl": "https://patpat.gitbook.io/penguin-action-toolkit",
     "samples": [
         {
-            "displayName": "General Resrouces (MUST IMPORT)",
-            "description": "This includes all the core scripts and art resources for Penguin Action Toolkit. Please make sure you've imported this sample before using this package.",
+            "displayName": "General Resrouces",
+            "description": "***IMPORTANT*** This includes all the core scripts and art resources for Penguin Action Toolkit. Please make sure you've imported this sample before using this package.",
             "path": "Samples~/PAT"
         }
     ]

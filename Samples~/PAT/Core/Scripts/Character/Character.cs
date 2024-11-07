@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -32,6 +33,8 @@ namespace PAT
         public event Action<MoveSet> onMoveSetLoad;
         public event Action<MoveSet> onMoveSetUnLoad;
 
+        protected Attribute timeAttribute;
+
         #region Getter
         public GameObject characterModel { get { return _characterModel; } }
         public ActionState currentState { get { return _currentState; } }
@@ -45,6 +48,9 @@ namespace PAT
         public CharacterLocomotionBase Locomotion { get { return locomotion; } set { locomotion = value; } }
         public ModelHandler modelHandler { get { return _modelHandler; } set { _modelHandler = value; } }
         public Vector3 inputDirection { get { return _inputDirection; } set { _inputDirection = value; }}
+        public float timeScale {get {return timeAttribute.currentAmount; } }
+        public float deltaTime {get {return Time.deltaTime * timeScale;}}
+        public float fixedDeltaTime {get{return Time.fixedDeltaTime * timeScale;}}
 
         #endregion
 
@@ -59,6 +65,12 @@ namespace PAT
             if(modelHandler == null) { modelHandler = _characterModel.GetComponent<ModelHandler>(); }
             if(modelHandler == null) { modelHandler = _characterModel.AddComponent<ModelHandler>(); }
             if (!_moveSetObject) _moveSetObject = gameObject;
+
+            timeAttribute = gameObject.AddComponent<Attribute>();
+            timeAttribute.resourceTag = GamePlayTag.TimeScale;
+            timeAttribute.SetBaseValue(1f);
+            timeAttribute.maxAmount = Mathf.Infinity;
+            timeAttribute.minAmount = -Mathf.Infinity;
         }
 
         protected override void Start()
@@ -78,8 +90,11 @@ namespace PAT
                 }
             }
         }
-        
 
+        public float CharacterFixedDeltaTime()
+        {
+            return Time.fixedDeltaTime * timeAttribute.currentAmount;
+        }
 
         protected override void Update()
         {
@@ -87,7 +102,7 @@ namespace PAT
             
             if (_currentState)
             {
-                _currentState.OnTick(Time.deltaTime);
+                _currentState.OnTick(deltaTime);
                 _currentState.CheckExit();
             }
 
