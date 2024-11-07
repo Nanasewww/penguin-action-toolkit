@@ -52,6 +52,11 @@ namespace PAT
 
         private void SpawnDamageNumber(PATComponent.EffectPackage package, EffectModValue mod)
         {
+            //make sure space is matching
+            RectTransform rectThis = ((RectTransform)transform);
+            RectTransform rectParent = ((RectTransform)transform.parent);
+            rectThis.sizeDelta = rectParent.sizeDelta;
+            
             //Then we spawn position accordingly, base one hitbox involved or not
             EffectHitboxInfo info = Effect.GetComponentFromList<EffectHitboxInfo>(package.effects);
             
