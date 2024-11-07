@@ -6,7 +6,7 @@ namespace PAT
 {
     public class CCLocomotionMotor3D: MonoBehaviour, CharacterLocomotionMotorBase
     {
-        [Header("Special Attributes")] 
+        [Header("Special Attributes")]
         [SerializeField] protected CharacterController controller;
         [SerializeField] protected LayerMask groundLayer;
         [SerializeField] protected float stableOnGroundDistance = 0.3f;
@@ -16,6 +16,11 @@ namespace PAT
         {
             if (controller == null) controller = GetComponent<CharacterController>();
             if (controller == null) controller = gameObject.AddComponent<CharacterController>();
+        }
+
+        private void Reset()
+        { 
+            groundLayer = LayerMask.GetMask("Default", "Ground");
         }
 
         public void ApplyMovement(CharacterLocomotionBase locomotion)

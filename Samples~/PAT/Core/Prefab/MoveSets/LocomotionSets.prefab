@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7438685148773487015}
   - component: {fileID: 8109628130527932779}
   - component: {fileID: 416947276579622608}
+  - component: {fileID: 1405017589865198939}
   m_Layer: 0
   m_Name: Death
   m_TagString: Untagged
@@ -211,6 +212,38 @@ MonoBehaviour:
     layer: 3
   _keepPlayOnExit: 0
   _exitOnMontageEnd: 0
+--- !u!114 &1405017589865198939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853565062665510621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3819368d7dfea4481bf9c1ed3184ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modName: 
+  mode: 0
+  _beginIndex: -1
+  _endIndex: -1
+  _beginTime: 0
+  _endTime: -1
+  _events:
+    onBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    onEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  modPattern: 4
+  _locomotionData:
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 0
+    ignoreGravity: 0
 --- !u!1 &4290013477474881729
 GameObject:
   m_ObjectHideFlags: 0

@@ -7264,11 +7264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08951845d0af4f144a8646223ed26388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: -1
   unitHealthBarPrefab: {fileID: 3200866752698448404, guid: a269f1b0c5c035644bfaabd619c691ca,
     type: 3}
   unitHealthBarFriendPrefab: {fileID: 3200866752698448404, guid: b7092e026dcba1a4d9bc08c6e586f343,
-    type: 3}
-  unitHealthBarBossPrefab: {fileID: 3200866752698448404, guid: 09617419bc3aea44aafb397a9593b538,
     type: 3}
 --- !u!225 &757404892
 CanvasGroup:
@@ -8004,7 +8003,7 @@ GameObject:
   - component: {fileID: 1193823229}
   - component: {fileID: 1193823231}
   - component: {fileID: 1193823230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
