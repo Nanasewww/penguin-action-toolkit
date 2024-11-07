@@ -28,7 +28,6 @@ namespace PAT
             else Debug.LogWarning("No player assigned for player cam");
             
             if (!vcam) vcam = GetComponent<CinemachineVirtualCamera>();
-
         }
 
         private void Start()
