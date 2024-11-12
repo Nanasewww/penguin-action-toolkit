@@ -1324,6 +1324,8 @@ MonoBehaviour:
   _healthAttribute: {fileID: 6555088914869467700}
   _effects: []
   _attributes: []
+  _attributeLawsSource: []
+  _attributeLawsTarget: []
   _characterModel: {fileID: 4779102911670635643}
   locomotion: {fileID: 0}
   _modelHandler: {fileID: 0}
@@ -1346,8 +1348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28dafad0337c8c42b4e68779c026b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _onGround: 0
+  _character: {fileID: 0}
+  _characterTransform: {fileID: 0}
+  Gravity: {x: 0, y: -30, z: 0}
   _baseData:
     _moveSpeed: 2
     _rotationSpeed: 180
@@ -1360,19 +1363,11 @@ MonoBehaviour:
     airSpeedRatio: 0.8
     airAcc: 50
     airDamp: 0
-  _currentExtraData:
-    groundAcc: 50
-    groundDamp: 25
-    airSpeedRatio: 0.8
-    airAcc: 25
-    airDamp: 0
+  _onGround: 0
   _currentMoveDirection: {x: 0, y: 0, z: 0}
   _currentRotateDirection: {x: 0, y: 0, z: 0}
   _currentMovement: {x: 0, y: 0, z: 0}
   _extraMovement: {x: 0, y: 0, z: 0}
-  _character: {fileID: 0}
-  _characterTransform: {fileID: 0}
-  Gravity: {x: 0, y: -30, z: 0}
 --- !u!114 &7217217632764373315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5595,7 +5590,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5229611507199419410, guid: 9ca9dde593324e442a7fed5da113ee8c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6575657094413761518, guid: 9ca9dde593324e442a7fed5da113ee8c,

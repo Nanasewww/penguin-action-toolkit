@@ -121,13 +121,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 1
-    MoveSpeed: 0
-    rotationSpeed: 90
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1
+    _moveSpeed: 0
+    _rotationSpeed: 90
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1
     ignoreGravity: 0
 --- !u!114 &8874644800247701901
 MonoBehaviour:
@@ -154,13 +153,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 2
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 2
     ignoreGravity: 0
 --- !u!114 &9002532886122993685
 MonoBehaviour:
@@ -189,24 +187,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681807
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 40
-    postureDamage: 0
-    impactLevel: 0
-    knockBack: 3
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681807
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 40
         postureDamage: 0
         impactLevel: 0
         knockBack: 3
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &6317376574784279479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +287,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   _speed: 1
+  modPattern: 3
 --- !u!114 &3887842326394590241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +509,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _autoCollect: 1
   _owningStates: []
-  ownerCharacter: {fileID: 0}
 --- !u!114 &9114038821581786886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +532,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4786048898752952681}
-  - component: {fileID: 5229611507199419410}
   m_Layer: 0
   m_Name: Trails
   m_TagString: Untagged
@@ -566,31 +559,6 @@ Transform:
   - {fileID: 6374257494613756602}
   m_Father: {fileID: 9083289871772270915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5229611507199419410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986407439334561262}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ceb339997c8304e9354d4ce5ddc9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _emit: 1
-  _emitTime: 0
-  _material: {fileID: 2100000, guid: 5f402d1520e5fa74fa21e08f85b71370, type: 2}
-  _lifeTime: 0.5
-  _colors: []
-  _sizes: []
-  _minVertexDistance: 0.1
-  _maxVertexDistance: 10
-  _maxAngle: 3
-  _autoDestruct: 0
-  subdivisions: 4
-  _base: {fileID: 5591710046815196620}
-  _tip: {fileID: 6374257494613756602}
 --- !u!1 &2060593595178759640
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,13 +731,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 1
-    MoveSpeed: 0
-    rotationSpeed: 180
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1
+    _moveSpeed: 0
+    _rotationSpeed: 180
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1
     ignoreGravity: 0
 --- !u!114 &3010879757097524664
 MonoBehaviour:
@@ -796,13 +763,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1.25
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1.25
     ignoreGravity: 0
 --- !u!114 &8036501284124384462
 MonoBehaviour:
@@ -831,24 +797,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681803
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 30
-    postureDamage: 0
-    impactLevel: 0
-    knockBack: 2
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681803
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 30
         postureDamage: 1
         impactLevel: 0
         knockBack: 2
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &2156224429561463359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,24 +1022,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681805
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 50
-    postureDamage: 0
-    impactLevel: 1
-    knockBack: 4
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681805
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 50
         postureDamage: 2
         impactLevel: 1
         knockBack: 4
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &826279599244587383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,13 +1061,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 1
-    MoveSpeed: 0
-    rotationSpeed: 240
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 2.5
+    _moveSpeed: 0
+    _rotationSpeed: 240
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 2.5
     ignoreGravity: 0
 --- !u!114 &5778811667210940008
 MonoBehaviour:
@@ -1136,13 +1093,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 2.5
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 2.5
     ignoreGravity: 0
 --- !u!114 &3493841096926517690
 MonoBehaviour:
@@ -1203,6 +1159,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   _speed: 0.5
+  modPattern: 3
 --- !u!1 &2388254292583365263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1495,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   _speed: 0.3
+  modPattern: 3
 --- !u!114 &4270620776410940619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,13 +1521,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1
     ignoreGravity: 0
 --- !u!114 &7625046493691667976
 MonoBehaviour:
@@ -1764,13 +1721,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 1
-    MoveSpeed: 0
-    rotationSpeed: 180
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1
+    _moveSpeed: 0
+    _rotationSpeed: 180
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1
     ignoreGravity: 0
 --- !u!114 &8896743068814810010
 MonoBehaviour:
@@ -1797,13 +1753,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 2
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 2
     ignoreGravity: 0
 --- !u!114 &1142021537043386774
 MonoBehaviour:
@@ -1832,24 +1787,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681806
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 60
-    postureDamage: 0
-    impactLevel: 2
-    knockBack: 5
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681806
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 60
         postureDamage: 1
         impactLevel: 2
         knockBack: 5
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &5639701900125962342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1936,6 +1887,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   _speed: 1.5
+  modPattern: 3
 --- !u!1 &4956983593859112122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,24 +2175,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681804
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 40
-    postureDamage: 0
-    impactLevel: 0
-    knockBack: 2
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681804
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 40
         postureDamage: 1
         impactLevel: 0
         knockBack: 2
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &7046466902271572641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,13 +2214,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 1
-    MoveSpeed: 0
-    rotationSpeed: 180
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1
+    _moveSpeed: 0
+    _rotationSpeed: 180
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1
     ignoreGravity: 0
 --- !u!114 &5156505758623415904
 MonoBehaviour:
@@ -2299,13 +2246,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1.25
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1.25
     ignoreGravity: 0
 --- !u!114 &5393862461913554262
 MonoBehaviour:
@@ -2366,6 +2312,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   _speed: 2
+  modPattern: 3
 --- !u!114 &7227080358499235339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,6 +2339,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   _speed: 0.7
+  modPattern: 3
 --- !u!1 &5423387316558066340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,24 +2716,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681809
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 60
-    postureDamage: 0
-    impactLevel: 1
-    knockBack: 5
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681809
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 60
         postureDamage: 2
         impactLevel: 1
         knockBack: 5
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &7255469080862939866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2840,13 +2784,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 0
-    MoveSpeed: 0
-    rotationSpeed: 0
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 3.5
+    _moveSpeed: 0
+    _rotationSpeed: 0
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 3.5
     ignoreGravity: 0
 --- !u!114 &7582556327901354709
 MonoBehaviour:
@@ -3035,24 +2978,20 @@ MonoBehaviour:
         m_Calls: []
   _factory:
     rid: 1373890739979681808
+  _effects: []
   _owningHitbox: {fileID: 0}
-  _hitInfo:
-    damage: 40
-    postureDamage: 0
-    impactLevel: 0
-    knockBack: 3.5
-    attributeTags: 
   references:
     version: 2
     RefIds:
     - rid: 1373890739979681808
       type: {class: EffectFactory_P, ns: PAT, asm: Assembly-CSharp}
       data:
+        atkTag: 7
         damage: 40
         postureDamage: 1
         impactLevel: 0
         knockBack: 3.5
-        attributeTags: 
+        mainTagsForEffect: 
 --- !u!114 &1265175107750552688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3107,13 +3046,12 @@ MonoBehaviour:
     onEnd:
       m_PersistentCalls:
         m_Calls: []
+  modPattern: 4
   _locomotionData:
-    canMove: 0
-    canRotate: 1
-    MoveSpeed: 0
-    rotationSpeed: 90
-    locomotionAnimationSpeed: 0
-    rootMotionMutiplier: 1.5
+    _moveSpeed: 0
+    _rotationSpeed: 90
+    _locomotionAnimationSpeed: 0
+    _rootMotionMutiplier: 1.5
     ignoreGravity: 0
 --- !u!114 &8698021557851153479
 MonoBehaviour:

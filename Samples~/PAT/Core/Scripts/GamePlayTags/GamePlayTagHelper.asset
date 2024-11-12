@@ -138,5 +138,7 @@ MonoBehaviour:
       id: 1015
     - name: Critical
       id: 1016
+    - name: TimeScale
+      id: 1017
   - name: Other
     enums: []

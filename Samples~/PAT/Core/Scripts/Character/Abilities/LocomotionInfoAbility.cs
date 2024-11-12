@@ -9,6 +9,7 @@ namespace PAT
     /// </summary>
     public class LocomotionInfoAbility: MonoBehaviour
     {
+        public bool logToConsole = false;
         public Character owner;
         public GamePlayTag startMovingTag = GamePlayTag.forward;
         public GamePlayTag stopMovingTag = GamePlayTag.backward;
@@ -51,7 +52,7 @@ namespace PAT
                 && _lastMovement.magnitude < startMoveSpeed
                 && _currentMovement.magnitude >= startMoveSpeed)
             {
-                Debug.Log("start moving");
+                if(logToConsole) Debug.Log("start moving");
                 owner.tagContainer.inputTags.Add(startMovingTag);
             }
 
@@ -60,7 +61,7 @@ namespace PAT
                 && _lastDirection.magnitude > 0.1f
                  && _currentDirection.magnitude <= 0.1f)
             {
-                Debug.Log("stop moving");
+                if(logToConsole) Debug.Log("stop moving");
                 owner.tagContainer.inputTags.Add(stopMovingTag);
             }
 
@@ -68,25 +69,25 @@ namespace PAT
                 && _lastMovement.magnitude >= turnAroundSpeed
                 && Vector3.Angle(_lastMovement.normalized, _currentDirection) > 90f)
             {
-                Debug.Log("start turning");
+                if(logToConsole) Debug.Log("start turning");
                 owner.tagContainer.inputTags.Add(turningTag);
             }
 
             if (!_lastOnGround && _onGround)
             {
-                Debug.Log("landed");
+                if(logToConsole) Debug.Log("landed");
                 owner.tagContainer.inputTags.Add(landingTag);
             }
 
             if (_lastMovement.y >= 0 && _currentMovement.y < 0)
             {
-                Debug.Log("start falling");
+                if(logToConsole) Debug.Log("start falling");
                 owner.tagContainer.inputTags.Add(startFallingTag);
             }
 
             if (_lastMovement.y <= 0 && _currentMovement.y > 0)
             {
-                Debug.Log("start rising");
+                if(logToConsole) Debug.Log("start rising");
                 owner.tagContainer.inputTags.Add(startRisingTag);
             }
             

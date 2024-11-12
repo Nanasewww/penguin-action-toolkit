@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableOnStart : MonoBehaviour
+namespace PAT
 {
-    void Start()
+    public class DisableOnStart : MonoBehaviour
     {
-        gameObject.SetActive(false);
-    }
+        void Start()
+        {
+            gameObject.SetActive(false);
+        }
 
+    }
 }

@@ -7,6 +7,7 @@ namespace PAT
 {
     public class ShakeOnHurt: MonoBehaviour
     {
+        public bool shakeRotation = false;
         public Transform toShake;
         public PATComponent owner;
         public GamePlayTag hurtTag = GamePlayTag.Health;
@@ -16,6 +17,7 @@ namespace PAT
         public float shakeFrequency = 20f; // Frequency of the shake effect (higher means faster shaking)
 
         private Vector3 originalPosition;
+        private Vector3 originalRotation;
         private Coroutine shakeCoroutine;
         
         private void Awake()
@@ -50,9 +52,18 @@ namespace PAT
             if (shakeCoroutine != null)
             {
                 StopCoroutine(shakeCoroutine);
-                toShake.localPosition = originalPosition;
+                if (!shakeRotation)
+                {
+                    
+                    toShake.localPosition = originalPosition;
+                }
+                else
+                {
+                    toShake.localEulerAngles = originalRotation;
+                }
             }
-            shakeCoroutine = StartCoroutine(Shake());
+            if(!shakeRotation)shakeCoroutine = StartCoroutine(Shake());
+            else shakeCoroutine = StartCoroutine(ShakeRot());
         }
         
         private IEnumerator Shake()
@@ -64,14 +75,34 @@ namespace PAT
             {
                 float xOffset = Mathf.PerlinNoise(Time.time * shakeFrequency, 0f) * 2 - 1;
                 float yOffset = Mathf.PerlinNoise(0f, Time.time * shakeFrequency) * 2 - 1;
+                float zOffset = Mathf.PerlinNoise(0f, Time.time * shakeFrequency) * 2 - 1;
 
-                toShake.localPosition = originalPosition + new Vector3(xOffset, yOffset, 0) * shakeIntensity;
+                toShake.localPosition = originalPosition + new Vector3(xOffset, yOffset, zOffset) * shakeIntensity;
 
                 elapsed += Time.deltaTime;
                 yield return null;
             }
 
             toShake.localPosition = originalPosition; // Reset to original position after shake
+        }
+        
+        private IEnumerator ShakeRot()
+        {
+            float elapsed = 0f;
+            originalRotation = toShake.localEulerAngles;
+
+            while (elapsed < shakeDuration)
+            {
+                float xOffset = Mathf.PerlinNoise(Time.time * shakeFrequency, 0f) * 2 - 1;
+                float yOffset = Mathf.PerlinNoise(0f, Time.time * shakeFrequency) * 2 - 1;
+
+                toShake.localEulerAngles= originalRotation + new Vector3(xOffset, yOffset, 0) * shakeIntensity;
+
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            toShake.localEulerAngles = originalRotation; // Reset to original position after shake
         }
     }
     

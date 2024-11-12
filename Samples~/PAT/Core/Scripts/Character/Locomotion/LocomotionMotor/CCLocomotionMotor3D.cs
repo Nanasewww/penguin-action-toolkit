@@ -9,9 +9,11 @@ namespace PAT
         [Header("Special Attributes")]
         [SerializeField] protected CharacterController controller;
         [SerializeField] protected LayerMask groundLayer;
-        [SerializeField] protected float stableOnGroundDistance = 0.3f;
+        [SerializeField] protected float snapToGroundDistance = 0.5f;
+        [SerializeField] protected float additionalGroundCheckDistance = 0.2f;
         [SerializeField] [Tooltip("Direction for Raycast")] protected Vector3 gravityDirection = new Vector3(0, -1, 0);
         
+        public Vector3 rootPosition { get{ return controller.transform.position + controller.center - new Vector3(0, controller.height * 0.5f, 0) ;}}
         private void Awake()
         {
             if (controller == null) controller = GetComponent<CharacterController>();
@@ -28,12 +30,10 @@ namespace PAT
             controller.Move((locomotion.currentMovement + locomotion.extraMovement) * locomotion.FixedDeltaTime());
             
             //Snap to ground section
-
             
             RaycastHit hit; 
-            Vector3 rootPosition = controller.transform.position + controller.center - new Vector3(0, controller.height * 0.5f, 0) ;
-            Physics.Raycast(rootPosition, gravityDirection,  out hit, stableOnGroundDistance, groundLayer);
-            
+            Physics.Raycast(rootPosition, gravityDirection,  out hit, snapToGroundDistance, groundLayer);
+
             Vector3 dif = hit.point - rootPosition;
 
             if (hit.collider != null && (locomotion.currentMovement + locomotion.extraMovement).y <= 0)
@@ -53,16 +53,19 @@ namespace PAT
 
         public bool CheckIfGrounded(CharacterLocomotionBase locomotion)
         {
-            Vector3 rootPosition = controller.transform.position + controller.center - new Vector3(0, controller.height * 0.5f, 0) ;
-            if (Physics.Raycast(rootPosition, gravityDirection, stableOnGroundDistance, groundLayer)) return true;
-            if (Physics.Raycast(rootPosition + new Vector3(controller.radius, 0, 0), gravityDirection, stableOnGroundDistance, groundLayer)) return true;
-            if (Physics.Raycast(rootPosition + new Vector3(-controller.radius, 0, 0), gravityDirection, stableOnGroundDistance, groundLayer)) return true;
-            if (Physics.Raycast(rootPosition + new Vector3(0 ,0 , controller.radius), gravityDirection, stableOnGroundDistance, groundLayer)) return true;
-            if (Physics.Raycast(rootPosition + new Vector3(0 ,0 , -controller.radius), gravityDirection, stableOnGroundDistance, groundLayer)) return true;
+            if (controller.isGrounded) return true;
+            if (Physics.Raycast(rootPosition, gravityDirection, additionalGroundCheckDistance, groundLayer)) return true;    
+
+            if (Physics.Raycast(rootPosition + new Vector3(controller.radius, 0, 0), gravityDirection, additionalGroundCheckDistance, groundLayer)) return true;
+            if (Physics.Raycast(rootPosition + new Vector3(-controller.radius, 0, 0), gravityDirection, additionalGroundCheckDistance, groundLayer)) return true;
+            if (Physics.Raycast(rootPosition + new Vector3(0 ,0 , controller.radius), gravityDirection, additionalGroundCheckDistance, groundLayer)) return true;
+            if (Physics.Raycast(rootPosition + new Vector3(0 ,0 , -controller.radius), gravityDirection, additionalGroundCheckDistance, groundLayer)) return true;
+            
 
             return false;
         }
-
+        
+        
         public void MoveToPosition(CharacterLocomotionBase locomotion, Vector3 destPosition)
         {
             controller.enabled = false;

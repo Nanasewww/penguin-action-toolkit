@@ -11,7 +11,7 @@ namespace PAT{
         PAT_Manager_NodeWindow nodeWindow;
         PAT_Manager_InspectorWindow inspectorWindow;
         
-        [MenuItem("PAT_Toolkit/PAT_Manager")]
+        [MenuItem("Tools/PAT_Manager")]
         public static void OpenWindow()
         {
             PAT_Manager wnd = GetWindow<PAT_Manager>();

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6425450585572765173}
-  - component: {fileID: 6091913080366529534}
   - component: {fileID: 1345408422947979824}
   - component: {fileID: 1567136010076360231}
   m_Layer: 0
@@ -38,19 +37,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6091913080366529534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205772320726658529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35484abe31b49b4ad8bdd011f6b0575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tmp: {fileID: 0}
 --- !u!222 &1345408422947979824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -81,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: asddasdfasdf
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b44386e461034194ab4534228a9e4f6c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: b44386e461034194ab4534228a9e4f6c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
